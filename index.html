@@ -5,29 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Rock, Papper, Scissors</title>
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <h1>Rock, Papper & Scissors</h1>
+    <h1>Rock, Paper & Scissors</h1>
         <h2>Game On!</h2>
  <!--choices-->  
  <div id="button">
-    <button id="rock" type="button">Rock</button>
-  
-    <button id="papper" type="button">Papper</button>
-  
-    <button id="scissors" type="button">Scissors</button>
+    <button id="rock" type="button"></button>
+    <button id="paper" type="button"></button>
+    <button id="scissors" type="button"></button>
   </div>
  
 <!--The duel-->
-<div class="player">Player Score:<input type="checkbox" name="Win" id="win"></div>
-<div class="computer">Computer Score:<input type="checkbox" name="
-    Lose" id="lose"></div>
-
+<div id="game">
+    <div id="player">Player :</div>
+    <div id="computer">Computer :</div>
+</div>
 <!--score-->
 <div id="score">
-<h4 class="win">You Win!!!</h4>
-<h4 class="lose">You Lose ):</h4>
+    <h4 id="tie"></h4>
+    <h4 id="win"></h4>
+    <h4 id="lose"></h4>
 </div>
 
      <script src="main.js"></script>

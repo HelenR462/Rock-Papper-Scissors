@@ -27,31 +27,39 @@ h1, h2{
 
 #rock{
      color:rgb(49, 49, 49) ; 
-    width: 33%;
+    width: 30%;
     background-color:rgb(95, 162, 92); 
     border: 4px solid rgb(198, 196, 196); 
-    height: 400px;
-    background-image: url(https://thenounproject.com/icon/rock-5846/);
+    height: 40vh;
+    background-image: url(https://static.thenounproject.com/png/1470135-84.png);
+    background-repeat: no-repeat;
+    background-size:40vh;
+ 
 }
 
-#papper{
+#paper{
     width:30%; 
-    background-color:rgb(171, 93, 67); 
+    background-color:rgb(201, 98, 98); 
     border: 4px solid rgb(198, 196, 196);
-    height: 400px;
+    height: 40vh;
     color:rgb(49, 49, 49);
-    background-image: url(https://thenounproject.com/icon/papper-1401127/);
+    background-image: url(https://static.thenounproject.com/png/1401127-84.png);
+    background-repeat: no-repeat;
+    background-size:40vh;
+    
 }
 
 #scissors{
     width:30%; 
-    background-color:rgb(96, 164, 240); 
+    background-color:rgb(92, 143, 203); 
     border: 4px solid rgb(198, 196, 196);
-    height: 400px; 
+    height: 40vh; 
     color:rgb(49, 49, 49);
-    background-image: url(https://thenounproject.com/icon/scissors-116501/); 
+    background-image: url(https://static.thenounproject.com/png/116501-84.png); 
+    background-repeat: no-repeat;
+    background-size: 40vh;
 }
-
+/*
 #gamers{
     text-align:center;
     font: 1.5em 'Time New Roman';
@@ -65,4 +73,4 @@ h1, h2{
 
 #computer{
     color: dimgrey;
-} 
+} */
