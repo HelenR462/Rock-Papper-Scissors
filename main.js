@@ -1,7 +1,10 @@
-document.getElementById('rock').addEventListener("click", rock);
-document.getElementById('paper').addEventListener("click", paper);
-document.getElementById('scissors').addEventListener("click", scissors);
+document.getElementById('rock').addEventListener("click", ()=>compare('rock'));
+document.getElementById('paper').addEventListener("click", ()=>compare('paper'));
+document.getElementById('scissors').addEventListener("click", ()=>compare('scissors'));
 
+const playerScoreDisplay = document.getElementById('player');
+const computerScoreDisplay = document.getElementById('computer');
+const resultDisplay = document.getElementById('result');
 
  function rock(){
  document.getElementById('rock'). innerHTML = 'rock';
@@ -17,42 +20,52 @@ document.getElementById('scissors').addEventListener("click", scissors);
 
  let playerScore = 0;
  let computerScore = 0;
- let playerChoice;
- let computerChoice ;
- let selections;
- 
+  
  
  function computer(){
-    playerChoice = ["rock", "paper", "scissors"]
-        computerChoice =playerChoice[Math. floor(Math. random() * playerChoice. length)]  
+ const choices = ["rock", "paper", "scissors"]
+ const computerChoice =choices[Math. floor(Math. random() * choices. length)]  
          
-    console.log(computerChoice);
+    console.log('computerChoice in computer()' , computerChoice);
+    return computerChoice;
          } 
 
- function compare(){        
-    let tie =[["rock","rock"],
-            ["paper","paper"],
-            ["scissors","scissors"]];
+ function compare(userChoice){    
+     const computerChoice = computer();      
+        console.log('computerChoice in compare(): ' , computerChoice);
+        console.log('userChoice: ', userChoice);
 
-    let win =[["rock","scissors"],
-            ["paper","rock"],
-            ["scissors","paper"]];
+        console.log(userChoice + computerChoice);
+        switch(userChoice + computerChoice){
 
-    let lose= [["rock","paper"],
-            ["paper","scissors"],["scissors","rock"]];
+    case 'rockscissors':
+    case 'paperrock':
+    case 'scissorspaper':
+        playerScore++;
+playerScoreDisplay.textContent = 'player: ' + playerScore;
+resultDisplay.textContent = 'You chose ' + userChoice + '. The computer chose ' + computerChoice + '. You Won!'
+   break;     
+      
+      case 'rockrock':
+      case 'paperpaper':
+      case 'scissorsscissors':        
+            
+playerScore==computerScore;
+playerScoreDisplay.textContent = 'player: ' + playerScore;
+resultDisplay.textContent = 'You chose ' + userChoice + '. The computer chose ' + computerChoice + '. A Tie!' 
+   break;     
+
+    case 'rockpaper':
+    case 'paperscissors':
+    case 'scissorsrock':
           
-            print[('You chose' + 'playerChoice') + ('Computer chose' + 'computerChoice')];
+computerScore++;
+computerScoreDisplay.textContent = 'computer: ' + computerScore;
+resultDisplay.textContent = 'The computer chose ' + computerChoice + '. You chose ' + userChoice + '. You Lose!'
+   break;     
  }
          
-         switch(playerChoice, computerChoice) {
-            case tie  :
-               print("It's a Tie!");
-        break;
-             case win:
-               print(" You Win!");
-        break;
-              case lose:
-               print(" You Lose!");
-          
-        }
+} 
+ 
+ 
     
